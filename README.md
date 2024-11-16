@@ -1,2 +1,2 @@
-# RPA_2024
-A project repositorie for arobotic process automation course tought at Haaga-Helia University of Applied Sciences
+# RPA 2024
+A project repository for a robotic process automation course tought at Haaga-Helia University of Applied Sciences
