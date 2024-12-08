@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="839,1585" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="2396,977.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -34,128 +34,660 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.Mail.Activities</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Activities.System.Arrays</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>PresentationCore</AssemblyReference>
       <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
       <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
       <AssemblyReference>System.Drawing</AssemblyReference>
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
       <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
       <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>System.Net.Mail</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>UiPath.Workflow</AssemblyReference>
-      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Mail</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Xml.ReaderWriter</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>System.CodeDom</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Private.Xml.Linq</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-      <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart DisplayName="Automated Git repositories management" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Automated Git repositories management" sap:VirtualizedContainerService.HintSize="932.8,904.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="x:String" Default=" C:\Users\ter\Documents\dev" Name="gitRootLocation" />
-      <Variable x:TypeArguments="s:String[]" Name="gitRepositories" />
+      <Variable x:TypeArguments="x:String" Default="C:\Users\ter\Documents\dev\" Name="gitRootLocation" />
+      <Variable x:TypeArguments="s:String[]" Default="[new string(){}]" Name="gitRepositories" />
+      <Variable x:TypeArguments="s:String[]" Name="searchedDirectories" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="gitProcessingIndex" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="numberOfGitRepositories" />
+      <Variable x:TypeArguments="s:String[]" Default="[new string(){}]" Name="gitRepositoriesWithCommits" />
+      <Variable x:TypeArguments="s:String[]" Default="[new string(){}]" Name="gitRepositoriesWithNoCommits" />
+      <Variable x:TypeArguments="s:String[]" Default="[new string(){}]" Name="gitRepositoriesWithErrors" />
+      <Variable x:TypeArguments="s:String[]" Default="[new string(){}]" Name="gitRepositoriesUpdated" />
+      <Variable x:TypeArguments="s:String[]" Default="[new string(){}]" Name="gitRepositoriesUpToDate" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        <av:Point x:Key="ShapeLocation">270,2.3999999999999986</av:Point>
-        <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">300,77.4 300,184</av:PointCollection>
+        <av:Point x:Key="ShapeLocation">380,2.3999999999999986</av:Point>
+        <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">410,77.6 410,133.60000000000002</av:PointCollection>
         <x:Double x:Key="Width">898.8000000000001</x:Double>
         <x:Double x:Key="Height">867.868</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID10</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID1">
+    <FlowStep x:Name="__ReferenceID10">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">200,184</av:Point>
-          <av:Size x:Key="ShapeSize">200,52</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,184 300,184</av:PointCollection>
+          <av:Point x:Key="ShapeLocation">310,133.60000000000002</av:Point>
+          <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">410,186.40000000000003 410,316.4</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Flowchart DisplayName="Read available Git repositories" sap:VirtualizedContainerService.HintSize="634,637" sap2010:WorkflowViewState.IdRef="Flowchart_4">
+      <Flowchart DisplayName="Read available Git repositories" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="Flowchart_4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
-            <av:Size x:Key="ShapeSize">60,75</av:Size>
+            <av:Size x:Key="ShapeSize">60,75.2</av:Size>
             <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,109.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <Flowchart.StartNode>
-          <x:Reference>__ReferenceID0</x:Reference>
+          <x:Reference>__ReferenceID1</x:Reference>
         </Flowchart.StartNode>
-        <FlowStep x:Name="__ReferenceID0">
+        <FlowStep x:Name="__ReferenceID1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">200,109.5</av:Point>
-              <av:Size x:Key="ShapeSize">200,81</av:Size>
+              <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">300,192.7 300,288.4</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="200,81" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <Sequence DisplayName="Read all folders from root location" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <WriteLine DisplayName="read all root location folders" sap:VirtualizedContainerService.HintSize="433.6,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Read all root location folders" />
+            <Assign DisplayName="Assign all found directories to an array" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[searchedDirectories]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">[Directory.GetDirectories(gitRootLocation)]</InArgument>
+              </Assign.Value>
+            </Assign>
           </Sequence>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID0">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">200,288.4</av:Point>
+                  <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence DisplayName="Find git repositories from folder" sap:VirtualizedContainerService.HintSize="649.6,1558.4" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="587.2,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[&quot;Reading possible git repositories from folders :  &quot;+vbCrLf+String.Join(Environment.NewLine, searchedDirectories)]" />
+                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="587.2,1064" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[searchedDirectories]">
+                  <ui:ForEach.Body>
+                    <ActivityAction x:TypeArguments="x:String">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="553.6,876" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:Boolean" Name="booleanGitFolderExists" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="510.4,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Boolean">[booleanGitFolderExists]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Boolean">[Directory.Exists(currentItem+"\.git")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <If Condition="[booleanGitFolderExists]" sap:VirtualizedContainerService.HintSize="510.4,664.8" sap2010:WorkflowViewState.IdRef="If_1">
+                          <If.Then>
+                            <Sequence sap:VirtualizedContainerService.HintSize="476.8,301.6" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[&quot;Folder &quot;+currentItem.ToString+ &quot; detected as a git repository&quot;]" />
+                              <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="s:String[]">[gitRepositories]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="s:String[]">[gitRepositories.Append(currentItem).ToArray]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence sap:VirtualizedContainerService.HintSize="377.6,180" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[&quot;Folder &quot;+currentItem.ToString+ &quot;  is not detected to be a git repository&quot;]" />
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEach.Body>
+                </ui:ForEach>
+                <Assign sap:VirtualizedContainerService.HintSize="587.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">[numberOfGitRepositories]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">[gitRepositories.Count]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="587.2,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[&quot;Number of Git repositories found : &quot;+numberOfGitRepositories.ToString+&quot;.&quot;+vbCrLf+&quot;Git folders included : &quot;+vbCrLf+String.Join(Environment.NewLine, gitRepositories)]" />
+              </Sequence>
+            </FlowStep>
+          </FlowStep.Next>
         </FlowStep>
+        <x:Reference>__ReferenceID0</x:Reference>
       </Flowchart>
       <FlowStep.Next>
-        <x:Reference>__ReferenceID1</x:Reference>
+        <FlowDecision x:Name="__ReferenceID7" Condition="[gitProcessingIndex &lt; numberOfGitRepositories]" DisplayName="More git repositories to process" sap:VirtualizedContainerService.HintSize="160,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              <av:Point x:Key="ShapeLocation">330,316.4</av:Point>
+              <av:Size x:Key="ShapeSize">160,87.2</av:Size>
+              <av:PointCollection x:Key="FalseConnector">490,360 670,360 670,448.4</av:PointCollection>
+              <av:PointCollection x:Key="TrueConnector">330,360 230,360</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <FlowDecision.True>
+            <FlowStep x:Name="__ReferenceID8">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">30,333.6</av:Point>
+                  <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">130,333.6 130,303.6000000000001 370,303.6000000000001 370,316.4</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Flowchart DisplayName="Process git repository" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="Flowchart_6">
+                <Flowchart.Variables>
+                  <Variable x:TypeArguments="x:String" Name="gitRepositoryProcessed">
+                    <Variable.Default>
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </Variable.Default>
+                  </Variable>
+                  <Variable x:TypeArguments="sco:Collection(x:String)" Name="powerShellFeedback" />
+                  <Variable x:TypeArguments="x:Boolean" Default="False" Name="readyForGitPull" />
+                </Flowchart.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <av:Point x:Key="ShapeLocation">270,2.3999999999999986</av:Point>
+                    <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">300,77.6 300,128.4</av:PointCollection>
+                    <x:Double x:Key="Height">964.4</x:Double>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Flowchart.StartNode>
+                  <x:Reference>__ReferenceID6</x:Reference>
+                </Flowchart.StartNode>
+                <FlowStep x:Name="__ReferenceID6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">200,128.4</av:Point>
+                      <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">300,211.60000000000002 300,258.4</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Process next git repository" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_8">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[gitRepositoryProcessed]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[gitRepositories(gitProcessingIndex)]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[&quot;Processing git repositry : &quot;+gitRepositoryProcessed]" />
+                  </Sequence>
+                  <FlowStep.Next>
+                    <FlowStep x:Name="__ReferenceID3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">200,258.4</av:Point>
+                          <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">300,341.59999999999997 300,371.59999999999997 300.40000000000003,371.59999999999997 300.40000000000003,486.4</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="Get git repostory state" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:InvokePowerShell x:TypeArguments="x:String" CommandText="[&quot;git -C &quot;+gitRepositoryProcessed+&quot; status&quot;]" ContinueOnError="False" DisplayName="Invoke Power Shell" sap:VirtualizedContainerService.HintSize="623.2,80" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_19" IsScript="True" Output="[powerShellFeedback]">
+                          <ui:InvokePowerShell.PowerShellVariables>
+                            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                          </ui:InvokePowerShell.PowerShellVariables>
+                        </ui:InvokePowerShell>
+                        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="623.2,1490.4" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[powerShellFeedback]">
+                          <ui:ForEach.Body>
+                            <ActivityAction x:TypeArguments="x:String">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="589.6,1302.4" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="546.4,1212.8" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                                  <ui:IfElseIf.ConditionBlocks>
+                                    <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                      <ui:IfElseIfBlock BlockType="If" Condition="[currentItem.ToString.Contains(&quot;Changes not staged for commit&quot;)]">
+                                        <ui:IfElseIfBlock.Then>
+                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,445.6" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="s:String[]">[gitRepositoriesWithCommits]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="s:String[]">[gitRepositoriesWithCommits.Append(gitRepositoryProcessed).ToArray]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:Boolean">[readyForGitPull]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_17" Text="[&quot;Git repository &quot;+gitRepositoryProcessed+&quot; has unstaged commits, not ready fot Git update&quot;]" />
+                                          </Sequence>
+                                        </ui:IfElseIfBlock.Then>
+                                      </ui:IfElseIfBlock>
+                                      <ui:IfElseIfBlock BlockType="ElseIf" Condition="[currentItem.ToString.Contains(&quot;nothing to commit, working tree clean&quot;)]">
+                                        <ui:IfElseIfBlock.Then>
+                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,445.6" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="s:String[]">[gitRepositoriesWithNoCommits]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="s:String[]">[gitRepositoriesWithNoCommits.Append(gitRepositoryProcessed).ToArray]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:Boolean">[readyForGitPull]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_18" Text="[&quot;Git repository &quot;+gitRepositoryProcessed+&quot; has a clean working tree, ready for Git update&quot;]" />
+                                          </Sequence>
+                                        </ui:IfElseIfBlock.Then>
+                                      </ui:IfElseIfBlock>
+                                    </sc:BindingList>
+                                  </ui:IfElseIf.ConditionBlocks>
+                                </ui:IfElseIf>
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:ForEach.Body>
+                        </ui:ForEach>
+                        <If Condition="[not gitRepositoriesWithCommits.Contains(gitRepositoryProcessed) and not gitRepositoriesWithNoCommits.Contains(gitRepositoryProcessed)]" sap:VirtualizedContainerService.HintSize="623.2,606.4" sap2010:WorkflowViewState.IdRef="If_3">
+                          <If.Then>
+                            <Sequence sap:VirtualizedContainerService.HintSize="476.8,423.2" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="s:String[]">[gitRepositoriesWithErrors]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="s:String[]">[gitRepositoriesWithErrors.Append(gitRepositoryProcessed).ToArray]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_15">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Boolean">[readyForGitPull]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_19" Text="[&quot;Git repository &quot;+gitRepositoryProcessed+&quot; has reported unknown state, not ready for Git update&quot;]" />
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence sap:VirtualizedContainerService.HintSize="300,82.4" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                      <FlowStep.Next>
+                        <FlowDecision x:Name="__ReferenceID4" Condition="[readyForGitPull]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              <av:Point x:Key="ShapeLocation">260.8,486.4</av:Point>
+                              <av:Size x:Key="ShapeSize">79.2,87.2</av:Size>
+                              <av:PointCollection x:Key="FalseConnector">339.20000000000005,530 440,530 440,820 410,820</av:PointCollection>
+                              <av:PointCollection x:Key="TrueConnector">260.8,530 120,530 120,588.4</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <FlowDecision.True>
+                            <FlowStep x:Name="__ReferenceID5">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">20,588.4</av:Point>
+                                  <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">120,671.6 120,820 210,820</av:PointCollection>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Sequence DisplayName="Update git repository" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:InvokePowerShell x:TypeArguments="x:String" CommandText="[&quot;git -C &quot;+gitRepositoryProcessed+&quot; pull&quot;]" ContinueOnError="False" DisplayName="Invoke Power Shell" sap:VirtualizedContainerService.HintSize="623.2,80" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_20" IsScript="True" Output="[powerShellFeedback]">
+                                  <ui:InvokePowerShell.PowerShellVariables>
+                                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                  </ui:InvokePowerShell.PowerShellVariables>
+                                </ui:InvokePowerShell>
+                                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="623.2,1247.2" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[powerShellFeedback]">
+                                  <ui:ForEach.Body>
+                                    <ActivityAction x:TypeArguments="x:String">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="589.6,1059.2" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="546.4,969.6" sap2010:WorkflowViewState.IdRef="IfElseIf_3">
+                                          <ui:IfElseIf.ConditionBlocks>
+                                            <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                              <ui:IfElseIfBlock BlockType="If" Condition="[currentItem.ToString.Contains(&quot;Updating&quot;)]">
+                                                <ui:IfElseIfBlock.Then>
+                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,324" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_23">
+                                                      <Assign.To>
+                                                        <OutArgument x:TypeArguments="s:String[]">[gitRepositoriesUpdated]</OutArgument>
+                                                      </Assign.To>
+                                                      <Assign.Value>
+                                                        <InArgument x:TypeArguments="s:String[]">[gitRepositoriesUpdated.Append(gitRepositoryProcessed).ToArray]</InArgument>
+                                                      </Assign.Value>
+                                                    </Assign>
+                                                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_23" Text="[&quot;Git repository &quot;+gitRepositoryProcessed+&quot; has received an update.&quot;]" />
+                                                  </Sequence>
+                                                </ui:IfElseIfBlock.Then>
+                                              </ui:IfElseIfBlock>
+                                              <ui:IfElseIfBlock BlockType="ElseIf" Condition="[currentItem.ToString.Contains(&quot;Already up to date&quot;)]">
+                                                <ui:IfElseIfBlock.Then>
+                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,324" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_25">
+                                                      <Assign.To>
+                                                        <OutArgument x:TypeArguments="s:String[]">[gitRepositoriesUpToDate]</OutArgument>
+                                                      </Assign.To>
+                                                      <Assign.Value>
+                                                        <InArgument x:TypeArguments="s:String[]">[gitRepositoriesUpToDate.Append(gitRepositoryProcessed).ToArray]</InArgument>
+                                                      </Assign.Value>
+                                                    </Assign>
+                                                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_25" Text="[&quot;Git repository &quot;+gitRepositoryProcessed+&quot; is alredy up to date.&quot;]" />
+                                                  </Sequence>
+                                                </ui:IfElseIfBlock.Then>
+                                              </ui:IfElseIfBlock>
+                                            </sc:BindingList>
+                                          </ui:IfElseIf.ConditionBlocks>
+                                        </ui:IfElseIf>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </ui:ForEach.Body>
+                                </ui:ForEach>
+                              </Sequence>
+                              <FlowStep.Next>
+                                <FlowStep x:Name="__ReferenceID2">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <av:Point x:Key="ShapeLocation">210,778.4</av:Point>
+                                      <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Sequence DisplayName="Increment processing index" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[gitProcessingIndex]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">[gitProcessingIndex+1]</InArgument>
+                                      </Assign.Value>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </Assign>
+                                  </Sequence>
+                                </FlowStep>
+                              </FlowStep.Next>
+                            </FlowStep>
+                          </FlowDecision.True>
+                          <FlowDecision.False>
+                            <x:Reference>__ReferenceID2</x:Reference>
+                          </FlowDecision.False>
+                        </FlowDecision>
+                      </FlowStep.Next>
+                    </FlowStep>
+                  </FlowStep.Next>
+                </FlowStep>
+                <x:Reference>__ReferenceID3</x:Reference>
+                <x:Reference>__ReferenceID4</x:Reference>
+                <x:Reference>__ReferenceID2</x:Reference>
+                <x:Reference>__ReferenceID5</x:Reference>
+              </Flowchart>
+              <FlowStep.Next>
+                <x:Reference>__ReferenceID7</x:Reference>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowDecision.True>
+          <FlowDecision.False>
+            <FlowStep x:Name="__ReferenceID9">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">570,448.4</av:Point>
+                  <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence DisplayName="Write automation report" sap:VirtualizedContainerService.HintSize="496,630.4" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="automationReport" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="Git automation task complete" />
+                <Assign sap:VirtualizedContainerService.HintSize="433.6,83.2" sap2010:WorkflowViewState.IdRef="Assign_27">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[automationReport]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String" xml:space="preserve">[If(numberOfGitRepositories=0,
+	"GIT AUTOMATION REPORT, Date "+DateTime.Now.ToString("dd-MM-yyyy")+vbnewline+"No repositories found under root folder.",
+		If(gitRepositoriesUpToDate.Count()=numberOfGitRepositories,
+			"GIT AUTOMATION REPORT, Date "+DateTime.Now.ToString("dd-MM-yyyy")+vbnewline+"Git repositories found : "+numberOfGitRepositories.ToString+vbCrLf+
+			"All repositories were up to date with a clean working tree"+vbCrLf+
+			"Repositories included in processing : "+vbnewline+String.Join(Environment.NewLine, gitRepositoriesUpToDate),
+				If(gitRepositoriesWithErrors.Count()&gt;0,
+					"GIT AUTOMATION REPORT, Date "+DateTime.Now.ToString("dd-MM-yyyy")+vbnewline+"Git repositories found : "+numberOfGitRepositories.ToString+vbnewline+
+						"There were errors found in "+gitRepositoriesWithErrors.Count().ToString()+" repositories: "+vbCrLf+String.Join(Environment.NewLine, gitRepositoriesWithErrors)+vbCrLf+
+						"Number of repositories up to date "+gitRepositoriesUpToDate.Count().ToString()+", update to date repositories are : "+vbCrLf+String.Join(Environment.NewLine, gitRepositoriesUpToDate)+vbCrLf+
+						"Number of repositories updated "+gitRepositoriesUpdated.Count().ToString()+", updated repositories are : "+vbCrLf+String.Join(Environment.NewLine, gitRepositoriesUpdated)+vbCrLf+
+						"Number of repositories with changes not staged for commit "+gitRepositoriesWithCommits.Count().ToString()+" these repositories were nut updated. Repositories are "+vbCrLf+String.Join(Environment.NewLine, gitRepositoriesWithCommits),
+					"GIT AUTOMATION REPORT, Date "+DateTime.Now.ToString("dd-MM-yyyy")+vbnewline+"Git repositories found : "+numberOfGitRepositories.ToString+vbnewline+
+						"Number of repositories up to date "+gitRepositoriesUpToDate.Count().ToString()+", update to date repositories are : "+vbCrLf+String.Join(Environment.NewLine, gitRepositoriesUpToDate)+vbCrLf+
+						"Number of repositories updated "+gitRepositoriesUpdated.Count().ToString()+", updated repositories are : "+vbCrLf+String.Join(Environment.NewLine, gitRepositoriesUpdated)+vbCrLf+
+						"Number of repositories with changes not staged for commit "+gitRepositoriesWithCommits.Count().ToString()+" these repositories were nut updated. Repositories are "+vbCrLf+String.Join(Environment.NewLine, gitRepositoriesWithCommits)
+				)
+		)
+)]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_26" Text="[automationReport]" />
+                <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[gitRootLocation+&quot;gitAutomationReport.txt&quot;]" sap:VirtualizedContainerService.HintSize="433.6,134.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[automationReport]" />
+              </Sequence>
+            </FlowStep>
+          </FlowDecision.False>
+        </FlowDecision>
       </FlowStep.Next>
     </FlowStep>
+    <x:Reference>__ReferenceID7</x:Reference>
+    <x:Reference>__ReferenceID8</x:Reference>
+    <x:Reference>__ReferenceID9</x:Reference>
   </Flowchart>
 </Activity>
